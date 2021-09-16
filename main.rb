@@ -1,6 +1,6 @@
      
 require 'sinatra'
-require 'sinatra/reloader'
+require 'sinatra/reloader' if development?
 require_relative "methods/user.rb"
 require 'pg'
 require 'bcrypt'

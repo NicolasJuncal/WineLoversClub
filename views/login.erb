@@ -5,19 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WineLoversClub</title>
-  <link rel="stylesheet" href='/stylesheets/main.css'>
+   <link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/main.css">
 </head>
 <body>
   <header>
-     <div class="logo"><h1>WineLoversClub</h1></div><div class="button"><a href="/signin">Sign In</a></div>
+     <div class="logo"><h1>WineLoversClub</h1></div>
+     <div class="button" id="press"><a href="/signin">Sign In</a></div>
   </header>
-  <div class="form-wrapper">
+  <div class="login-wrapper">
     <div class="login-form"><form action="/session" method="post">
       <label for="email">E-mail</label>
       <input type="text" name="email" id="email">
       <label for="password">password</label>
       <input type="password" name="password" id="password">
-      <button>Log in</button>
+      <button class="button" id="press">Log in</button>
       </form>
     </div>
  </div>

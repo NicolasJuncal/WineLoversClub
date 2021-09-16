@@ -4,22 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WineLoversClub Sign in</title>
-  <link rel="stylesheet" href="/stylesheet/main.css">
+  <title>WineLoversClub</title>
+   <link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/main.css">
 </head>
 <body>
- <div class="logo"><h1>WineLoversClub</h1></div>
-<form action="/new_user" method="post">
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name">
-    <label for="last">Last Name</label>
-    <input type="text" name="last" id="last">
-    <label for="email">E-mail</label>
-    <input type="text" name="email" id="email">
-    <label for="password">password</label>
-    <input type="password" name="password" id="password">
-    <button>Create user</button>
- </form>
-  
+<div class="sign-in-wrapper">
+  <div class="logo" id="logo">
+  <a href="/"><h1>WineLoversClub</h1></a>
+    
+  </div>
+  <h2>Sign up and become a member free.</h2>
+  <div class="edit-form-wrapper">
+    <form class="sign-in-form" action="/new_user" method="post">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name">
+      <label for="last">Last Name</label>
+      <input type="text" name="last" id="last">
+      <label for="email">E-mail</label>
+      <input type="text" name="email" id="email">
+      <label for="password">password</label>
+      <input type="password" name="password" id="password">
+      <button>Create user</button>
+    </form>
+  </div>
+   <footer><a href="https://drinkwise.org.au/">DrinkWise.</a></footer>
+</div>
 </body>
 </html>
