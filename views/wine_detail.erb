@@ -1,7 +1,7 @@
 <div>
-  <h2>Displaying all <%=wine_type%> wines: </h2>
+  <span><h2>Displaying all <%=wine_type%> wines: </h2></span>
   <%if wines.count == 0 %>
-    <h4>Ooops..It doesn't seem you have drunk any <%=wine_type%> wine.</h4>
+    <h2 class="ops">Ooops..It doesn't seem you have drunk any <%=wine_type%> wine.</h2>
   <%else%>
    <div class="home-content">
     <% wines.each do |wine| %>

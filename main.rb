@@ -1,6 +1,6 @@
      
 require 'sinatra'
-require 'sinatra/reloader' if development?
+require 'sinatra/reloader' #if development?
 require_relative "methods/user.rb"
 require 'pg'
 require 'bcrypt'
@@ -71,3 +71,10 @@ put '/my_wine/:id/edit' do
   redirect "/my_wine/#{params['type']}"
 end
 
+get '/pairing' do
+  erb :page_filer
+end
+
+get '/new_events' do
+  erb :page_filler2
+end

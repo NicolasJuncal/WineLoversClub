@@ -6,13 +6,13 @@
   <link rel='stylesheet' href='/stylesheets/main.css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
+  <script src="/javascripts/application.js"></script>
 </head>
 <div class="wrapper">
   <body>
   <header>
-
-  <a href="/home"><div class="logo"><h1>WineLoversClub</h1></div></a>
-  <div class="avatar-section">
+    <a href="/home"><div class="logo"><h1>WineLoversClub</h1></div></a>
+    <div class="avatar-section">
     <h2>Cheers,  <%= find_user_by_id(session['id'])["name"] %> </h2> 
     <img class="avatar" src="/avatar.png" alt="">
     <form action="/session" method="post">

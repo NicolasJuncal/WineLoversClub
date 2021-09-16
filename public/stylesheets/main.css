@@ -8,8 +8,12 @@
   border: 1px solid rgba(0, 0, 0, 0.406);
   margin-left: 20px;
 }
+
 header a {
   color: black;
+}
+header button {
+  color: white;
 }
 #logo {
   width: 41%;
@@ -48,7 +52,6 @@ header a {
 .logo h1 {
  margin-top: -1px;
  font-size: 80px;
-
 }
 .wrapper {
   width: 100%;
@@ -83,6 +86,9 @@ header a {
   border-radius: 10px;
   text-align: center;
   box-shadow: 3px 7px #773a3a93;
+}
+.user-posts:hover {
+  box-shadow: 3px 7px #0000008a;
 }
 
 .my-wine {
@@ -138,6 +144,19 @@ a {
  text-decoration: none;
  color: white;
 }
+span h2 {
+  padding-left: 45px;
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  text-shadow: 4px 4px #000000;
+  background-color: rgba(111, 53, 53, 0.236);
+  font-family: 'Convergence', sans-serif;
+}
+.ops {
+  padding-left: 60px;
+  padding-top: 30px;
+}
 .avatar {
   width: 50px;
   height: 50px;
@@ -156,9 +175,27 @@ a {
   box-shadow: 1px 3px #888888;
   font-family: 'Convergence', sans-serif;
 }
+#btn-sign {
+  width: 173px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.406);
+  border-radius: 30px;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 15px;
+  box-shadow: 1px 3px #888888;
+  font-family: 'Convergence', sans-serif;
+}
+#btn-sign a {
+  color: white;
+}
+#btn-sign:hover {
+  background-color: black;
+}
 
 .button:hover {
   background-color: black;
+  box-shadow: 2px 4px #773a3a93;
 }
 .logout:hover {
   background-color: black;
@@ -257,4 +294,37 @@ footer {
 }
 footer a:hover {
   color: black;
+}
+.edit-link:hover {
+  color: rgb(131, 78, 255);
+}
+
+select:focus {
+  border: 3px solid #555;
+  background-color: blanchedalmond;
+}
+textarea:focus {
+  border: 3px solid #555;
+  background-color: blanchedalmond;
+}
+select {
+  width: 100%;
+  padding: 2px 2px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  background-color: rgba(111, 53, 53, 0.1);
+}
+textarea {
+  background-color: rgba(111, 53, 53, 0.1);
+  width: 100%;
+  padding: 2px 2px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  background-color: rgba(111, 53, 53, 0.1);
 }
