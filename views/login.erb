@@ -9,15 +9,19 @@
 </head>
 <body>
   <header>
-    <div><h1>WineLoversClub</h1></div><div><a href="/signin">Sign In</a></div>
+     <div class="logo"><h1>WineLoversClub</h1></div><div class="button"><a href="/signin">Sign In</a></div>
   </header>
- <form action="/session" method="post">
-    <label for="email">E-mail</label>
-    <input type="text" name="email" id="email">
-    <label for="password">password</label>
-    <input type="password" name="password" id="password">
-    <button>Log in</button>
- </form>
-  <a href="https://drinkwise.org.au/">DrinkWise.</a>
+  <div class="form-wrapper">
+    <div class="login-form"><form action="/session" method="post">
+      <label for="email">E-mail</label>
+      <input type="text" name="email" id="email">
+      <label for="password">password</label>
+      <input type="password" name="password" id="password">
+      <button>Log in</button>
+      </form>
+    </div>
+ </div>
+ <footer><a href="https://drinkwise.org.au/">DrinkWise.</a></footer>
+  
 </body>
 </html>

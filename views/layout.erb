@@ -2,13 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hello World</title>
+  <title>WineLoversClub</title>
   <link rel='stylesheet' href='/stylesheets/main.css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
 </head>
-<body>
+<div class="wrapper">
+  <body>
+  <header>
+  <div class="logo"><h1>WineLoversClub</h1></div> 
+  <div class="avatar-section">
+    <h2>Cheers,  <%= find_user_by_id(session['id'])["name"] %> </h2> 
+    <img class="avatar" src="/avatar.png" alt="">
+    <form action="/session" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <br><br><button class="logout">Logout</button></div>
+    </form>
+  </header>
+  <nav>
+  <div class="button" ><a href="/home">Home</a></div>
+  <div class="button" ><a href="/my_wine">MyWine</a></div>
+  <div class="button" ><a href="/new_events">New Events</a></div>
+  <div class="button" ><a href="/pairing">Pairing</a></div>
+  </nav>
+</div>
+    <%= yield %>
 
-  <%= yield %>
-
-</body>
+  </body>
 </html>

@@ -1,0 +1,26 @@
+<div class="home-content">
+  <% wines.each do |wine| %>
+  <div class="user-posts">
+    <h3><%=wine["title"]%> <%=wine["year"]%></h3>
+    <p><strong><%=find_user_by_id(wine['user_id'])["name"]%></strong> 
+      <%if wine["score"].to_i == 5%> has loved <%=wine["title"]%> has given <%=wine["score"]%> stars as score.<br>⭐⭐⭐⭐⭐ 
+      <%elsif wine["score"].to_i == 4%> has really liked <%=wine["title"]%> and gave <%=wine["score"]%> stars as score.<br>⭐⭐⭐⭐
+      <%elsif wine["score"].to_i == 3%> has liked <%=wine["title"]%> and gave <%=wine["score"]%> stars as score.<br>⭐⭐⭐
+      <%elsif wine["score"].to_i == 2%> has disapproval <%=wine["title"]%> and gave <%=wine["score"]%> stars as score.<br>⭐⭐
+      <%else%>has detested <%=wine["title"]%> and gave <%=wine["score"]%> star as score.<br>⭐<%end%>
+    </p>
+    <img class="bottle" src="<%=wine["image_url"]%>" alt="<%=wine["title"]%>">
+    
+    <% if wine["review"].strip! != "" %>
+        <p><strong class="comment"><%=find_user_by_id(wine['user_id'])["name"]%></strong> has made  
+        <%if wine["score"].to_i > 3%> a very good 
+        <%elsif wine["score"].to_i == 3%> a good 
+        <%else%> an unfavourable
+        <%end%> 
+        review: <br><br><span class="comment">"<%=wine["review"]%>"</span></p>
+        <%else%>
+        <p>No reviews for this wine from <strong><%=find_user_by_id(wine['user_id'])["name"]%></strong> yet.</p>
+      <%end%>
+    </div>
+  <%end%>
+</div>

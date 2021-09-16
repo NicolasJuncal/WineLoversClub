@@ -1,0 +1,39 @@
+<div class="my-wine">
+  <div >
+    <nav class="nav2">
+      <div class="button"><a href="/my_wine/red">Red Wine</a></div>
+      <div class="button"><a href="/my_wine/white">White Wine</a></div>
+      <div class="button"><a href="/my_wine/rose">Rose Wine</a></div>
+      <div class="button"><a href="/my_wine/sparkling">Sparkling Wine</a></div>
+    </nav>
+  </div>
+  <div class="new-wine-form">
+    <form action="/new_wine" method="post">
+      <label for="">Label Name</label>
+      <input type="text" name="title">
+      <label for="">Year</label>
+      <input type="text" name="year">
+      <label for="">Label Photo</label>
+      <input type="text" name="image_url">
+      <label for="type">Wine Type</label>
+          <select name="type" id="type">
+            <option value="red">Red</option>
+            <option value="white">White</option>
+            <option value="rose">Rose</option>
+            <option value="sparkling">Sparkling</option>
+        </select>
+      <label for="score">Your score</label>
+        <select name="score" id="score">
+          <option value="1">⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+      <label for="">Write a review</label>
+      <textarea name="review" cols="30">
+      </textarea>
+      <button>Add</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div>
+  <h2>Displaying all <%=wine_type%> wines: </h2>
+  <%if wines.count == 0 %>
+    <h4>Ooops..It doesn't seem you have drunk any <%=wine_type%> wine.</h4>
+  <%else%>
+   <div class="home-content">
+    <% wines.each do |wine| %>
+    <div class="user-posts">
+      <h3><%=wine["title"]%> harvest: <%=wine["year"]%></h3>
+      <p>Your given score is: <%=wine["score"]%></p>
+      <img class="bottle" src="<%=wine["image_url"]%>" alt="">
+      <p>Your experience: <%=wine["review"]%> <a class="edit-link" href='/my_wine/<%=wine["id"]%>/edit'>Edit post </a></p>
+
+    </div>
+    
+    
+
+    <%end%>
+    </div>
+    <footer><a href="https://drinkwise.org.au/">DrinkWise.</a></footer>
+  <%end%>
+</div>
+  

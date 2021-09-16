@@ -1,0 +1,33 @@
+<div class="edit-form-wrapper">
+  <div class="edit-form">
+    <form action="/my_wine/<%=old_data["id"]%>/edit" method="post">
+    <input type="hidden" name="_method" value="put">
+      <label for="">Label Name</label>
+      <input type="text" name="title" value="<%=old_data["title"]%>">
+      <label for="">Year</label>
+      <input type="text" name="year" value="<%=old_data["year"]%>">
+      <label for="">Label Photo</label>
+      <input type="text" name="image_url" value="<%=old_data["image_url"]%>">
+      <label for="type">Wine Type</label>
+          <select name="type" id="type" value="<%=old_data["type"]%>">
+            <option value="red">Red</option>
+            <option value="white">White</option>
+            <option value="rose">Rose</option>
+            <option value="sparkling">Sparkling</option>
+        </select>
+      <label for="score">Your score</label>
+        <select name="score" id="score" value="<%=old_data["score"]%>">
+          <option value="1">⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+      <label for="">Write a review</label>
+      <textarea name="review" cols="30">
+      <%=old_data["review"]%>"
+      </textarea>
+      <button class="button">Make changes</button>
+    </form>
+  </div>
+</div>

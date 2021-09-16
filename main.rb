@@ -7,13 +7,13 @@ require 'bcrypt'
 enable :sessions
 
 get '/' do
-  erb :login
+  erb :login, layout: false
 end
 
 post '/session' do
   user = find_user_by_email(params["email"])
   if user && BCrypt::Password.new(user["password_digest"]) == params["password"]
-  session["name"] = user["name"]
+  session["id"] = user["id"]
   redirect '/home'
   else
     redirect '/'
@@ -21,7 +21,7 @@ post '/session' do
 end
 
 get '/signin' do
-  erb :signin
+  erb :signin, layout: false
 end
 
 post '/new_user' do
@@ -35,16 +35,39 @@ post '/new_user' do
 end
 
 get '/home' do
-  session['name']
+  wines = find_all_wines()
+  erb :home, locals: { wines: wines }
 end
 
 delete '/session' do
-  session["name"] = nil
+  session["id"] = nil
   redirect '/'
 end
 
+get '/my_wine' do
 
+  erb :my_wine
+end
 
+post "/new_wine" do
+  create_new_wine(session["id"], params["title"], params["year"], params["image_url"], params["type"], params["score"], params["review"])
+  redirect "/home"
+end
 
+get '/my_wine/:type' do
+  user = session["id"]
+  wine_type = params[:type]
+  wines = find_all_wines_by_id_and_type(user, wine_type)
+  erb :wine_detail, locals: { wines: wines, wine_type: wine_type }
+end
 
+get '/my_wine/:id/edit' do
+  old_data = find_wine_by_id(params[:id])
+  erb :edit, locals: { old_data: old_data }
+end
+
+put '/my_wine/:id/edit' do
+  update_a_wine(params["id"], params["title"], params["year"], params["image_url"], params["type"], params["score"], params["review"])
+  redirect "/my_wine/#{params['type']}"
+end
 
