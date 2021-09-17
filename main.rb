@@ -1,7 +1,9 @@
      
 require 'sinatra'
-require 'sinatra/reloader' #if development?
+require 'sinatra/reloader' if development?
 require_relative "methods/user.rb"
+require_relative "library/helpers.rb"
+require_relative "methods/wines.rb"
 require 'pg'
 require 'bcrypt'
 enable :sessions
@@ -26,11 +28,11 @@ end
 
 post '/new_user' do
   if check_email(params["email"])
-      "<a href='/signin'>Return</a> <p>It looks like the email <strong>#{params["email"]} </strong>has already been taken, please sign in with another email.</p><p>If you have lost your password, please send an email to <strong>password@wineloversclub.com.au</strong></p>"
+    "<a href='/signin'>Return</a> <p>It looks like the email <strong>#{params["email"]} </strong>has already been taken, please sign in with another email.</p><p>If you have lost your password, please send an email to <strong>password@wineloversclub.com.au</strong></p>"
   else
-  digested_password = BCrypt::Password.create(params["password"])
-  create_new_user(params["name"], params["last"], params["email"], digested_password )
-  redirect "/"
+    digested_password = BCrypt::Password.create(params["password"])
+    create_new_user(params["name"], params["last"], params["email"], digested_password )
+    redirect "/"
   end
 end
 
@@ -45,7 +47,6 @@ delete '/session' do
 end
 
 get '/my_wine' do
-
   erb :my_wine
 end
 
