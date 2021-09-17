@@ -1,6 +1,6 @@
 # WineLoversClub
 
-Back-end application - Project
+Back-end application
 
 Site hosted at Heroku: https://wineloversclub.herokuapp.com/
 
