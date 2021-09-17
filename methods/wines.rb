@@ -3,7 +3,7 @@ require_relative "../main.rb"
 require_relative "../library/helpers.rb"
 
 def create_new_wine(user_id, title, year, image_url, type, score, review)
-  sql = "INSERT INTO wine (user_id, title, year, image_url, type, score, review) VALUES ('#{user_id}', '#{title}','#{year}','#{image_url}','#{type}','#{score}', '#{review}');"
+  sql = "INSERT INTO wine (user_id, title, year, image_url, type, score, review) VALUES ('#{user_id}', '#{title.gsub("'", "''")}','#{year}','#{image_url}','#{type}','#{score}', '#{review.gsub("'", "''")}');"
   return run_sql(sql)
 end
 
@@ -23,6 +23,6 @@ def find_wine_by_id(id)
 end
 
 def update_a_wine(id, title, year, image_url, type, score, review)
-  sql = "Update wine set title = '#{title}', year = '#{year}', image_url = '#{image_url}', type = '#{type}', score = '#{score}', review = '#{review}' where id = '#{id}';"
+  sql = "Update wine set title = '#{title.gsub("'", "''")}', year = '#{year}', image_url = '#{image_url}', type = '#{type}', score = '#{score}', review = '#{review.gsub("'", "''")}' where id = '#{id}';"
   return run_sql(sql)
 end
