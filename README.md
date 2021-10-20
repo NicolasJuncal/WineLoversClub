@@ -1,15 +1,15 @@
 # WineLoversClub
 
-Back-end application
+Back-end application (CRUD APP)
 
 Site hosted at Heroku: https://wineloversclub.herokuapp.com/
 
 Technologies/Languages used in this project:
-Ruby
-HTML
-CSS
-SQL(PostgreSQL)
-Sinatra
+Ruby,
+HTML,
+CSS,
+SQL(PostgreSQL),
+Sinatra,
 Heroku
 
 Library
