@@ -2,7 +2,9 @@
 
 Back-end application (CRUD APP)
 Developed in Ruby. 
-The app iscompletely done from the Backend and rendered to theclient side.
+The app is completely done from the Backend and rendered to the client side.
+
+You can create an account and try the website on the link below
 
 Site hosted at Heroku: https://wineloversclub.herokuapp.com/
 
