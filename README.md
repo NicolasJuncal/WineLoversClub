@@ -16,7 +16,7 @@ CSS,
 PSQL(PostgreSQL),
 Sinatra,
 Github,
-Heroku
+Heroku,
 Bcrypt
 
 https://whimsical.com/winelovers-XWk9h2HWCNcarTcpBZcArh wireframe
